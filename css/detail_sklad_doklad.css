@@ -1,0 +1,164 @@
+:root {
+    --base-font-size: 14px; /* Zvětšeno na 16px */
+}
+
+body {
+    font-size: var(--base-font-size);
+}
+
+.result-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #1f4a77;
+    text-align: left;
+    margin-right: 10px;
+    width: 150px;
+    line-height: 1.2;
+    font-size: 1.0em;
+}
+
+.result-data {
+    font-weight: bold;
+    color: #000;
+    background-color: #81c3d791;
+    padding: 1px;
+    border-radius: 5px;
+    text-align: right;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 1.0em;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.centered {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+.sscc-label, .sscc-data, .sklad-label, .sklad-data {
+    font-size: 1.3em;
+}
+
+.doklad-data, .result-data-počet {
+    background-color: transparent;
+    font-size: 1.7em;
+    white-space: nowrap;
+}
+
+.result-data-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.result-data-inline {
+    display: inline-block;
+    text-align: right;
+}
+
+.item-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.item-data {
+    display: flex;
+    align-items: center;
+}
+
+.item-name {
+    text-align: left;
+    margin-top: 3px;
+    font-weight: bold;
+    font-size: 1.0em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Styl pro rámeček kolem výsledků od "SJ" po "Sklad" */
+.result-success {
+    border: 2px solid #28a745; /* Zelený rámeček */
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.result-warning {
+    border: 2px solid #ffc107; /* Žlutý rámeček */
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.result-danger {
+    border: 2px solid #dc3545; /* Červený rámeček */
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+}
